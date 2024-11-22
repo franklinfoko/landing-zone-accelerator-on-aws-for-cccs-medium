@@ -1,5 +1,5 @@
-homeRegion: &HOME_REGION ca-central-1
-configVersion: 1.10.0-a
+homeRegion: &HOME_REGION us-east-1  # ca-central-1
+#configVersion: 1.10.0-a
 enabledRegions:
   - *HOME_REGION  
   - "ap-northeast-1"
@@ -45,16 +45,16 @@ snsTopics:
       emailAddresses:
         - "{{ SecurityIgnore }}"
 controlTower:
-  enable: false # UPDATE if using Control Tower, set to true
+  enable: true # UPDATE if using Control Tower, set to true
   # UPDATE If using ControlTower, uncomment the following block and set the version to ControlTower latest available version
-  # landingZone:
-  #   version: '3.3'
-  #   logging:
-  #     loggingBucketRetentionDays: 365
-  #     accessLoggingBucketRetentionDays: 3650
-  #     organizationTrail: true
-  #   security:
-  #     enableIdentityCenterAccess: true
+  landingZone:
+    version: '3.3'
+    logging:
+      loggingBucketRetentionDays: 365
+      accessLoggingBucketRetentionDays: 3650
+      organizationTrail: true
+    security:
+      enableIdentityCenterAccess: true
 logging:
   account: LogArchive
   cloudtrail:
@@ -63,7 +63,7 @@ logging:
     organizationTrailSettings:
       multiRegionTrail: true
       globalServiceEvents: true
-      managementEvents: true # UPDATE If using ControlTower, set to False. Control Tower already configures an organization trail for management events
+      managementEvents: false # UPDATE If using ControlTower, set to False. Control Tower already configures an organization trail for management events
       s3DataEvents: true
       lambdaDataEvents: false
       sendToCloudWatchLogs: true
@@ -110,7 +110,7 @@ logging:
       - eu-west-2
       - eu-west-3
       - sa-east-1
-      - us-east-1
+     # - us-east-1
       - us-east-2
       - us-west-1
       - us-west-2
@@ -152,7 +152,7 @@ logging:
           - eu-west-2
           - eu-west-3
           - sa-east-1
-          - us-east-1
+        #  - us-east-1
           - us-east-2
           - us-west-1
           - us-west-2
@@ -202,7 +202,7 @@ s3:
         - eu-west-2
         - eu-west-3
         - sa-east-1
-        - us-east-1
+      #  - us-east-1
         - us-east-2
         - us-west-1
         - us-west-2
@@ -234,7 +234,7 @@ lambda:
         - eu-west-2
         - eu-west-3
         - sa-east-1
-        - us-east-1
+      #  - us-east-1
         - us-east-2
         - us-west-1
         - us-west-2

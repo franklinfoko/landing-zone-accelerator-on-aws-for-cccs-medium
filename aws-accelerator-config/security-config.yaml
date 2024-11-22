@@ -147,9 +147,9 @@ awsConfig:
   enableDeliveryChannel: true
   ## If using Control Tower, remove the following block as Control Tower already creates a config aggregator
   ## BEGIN
-  aggregation:
-    enable: true
-    delegatedAdminAccount: Audit
+  # aggregation:
+  #   enable: true
+  #   delegatedAdminAccount: Audit
   ## END
   ruleSets:
     - deploymentTargets:

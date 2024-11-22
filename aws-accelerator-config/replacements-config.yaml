@@ -13,57 +13,57 @@ globalReplacements:
   # Home Region
   - key: AcceleratorHomeRegion
     type: String
-    value: ca-central-1
+    value: us-east-1  # <----- UPDATE ca-central-1
   # Security notification emails
   - key: SecurityHigh
     type: String
-    value: <notify-high>@example.com
+    value: franklinfoko1@gmail.com  # <----- UPDATE
   - key: SecurityMedium
     type: String
-    value: <notify-medium>@example.com
+    value: fokofranklin47@gmail.com  # <----- UPDATE
   - key: SecurityLow
     type: String
-    value: <notify-low>@example.com
+    value: djomoupojumelionel@gmail.com  # <----- UPDATE
   - key: SecurityIgnore
     type: String
-    value: <notify-ignore>@example.com
+    value: franklin.foko@momentum-tech.ca  # <----- UPDATE
   # Budget notification emails
   - key: BudgetEmail
     type: String
-    value: <budget-alert>@example.com
+    value: djomoupojumelionel@gmail.com  # <----- UPDATE
   # Name of CloudWatch log group that centralizes CloudTrail logs. Referenced by CloudWatch metrics and alarms
   - key: CloudTrailLogGroup
     type: String
-    value: aws-accelerator-cloudtrail-logs # UPDATE If using ControlTower change this to 'aws-controltower/CloudTrailLogs'
+    value: aws-controltower/CloudTrailLogs # UPDATE aws-accelerator-cloudtrail-logs If using ControlTower change this to 'aws-controltower/CloudTrailLogs'
   # Managed Active Directory settings
   - key: MadDnsName
     type: String
-    value: example.local
+    value: example.local  # <----- UPDATE
   - key: MadNetbiosDomainName
     type: String
-    value: example
+    value: example  # <----- UPDATE
   - key: ActiveDirectoryConnectorEmail
     type: String
-    value: example-adconnector-user@example.com
+    value: example-adconnector-user@example.com  # <----- UPDATE
   - key: ActiveDirectoryUserEmail
     type: String
-    value: example-user1@example.com
+    value: example-user1@example.com  # <----- UPDATE
   - key: ActiveDirectoryReadonlyUserEmail
     type: String
-    value: example-user2@example.com
+    value: example-user2@example.com  # <----- UPDATE
   ###### IPAM ######
   - key: sandboxCidr
     type: String
-    value: 10.0.0.0/8
+    value: 10.0.0.0/8  # <----- UPDATE
   - key: AcceleratorIpamSupernet
     type: String
-    value: 10.0.0.0/8
+    value: 10.0.0.0/8  # <----- UPDATE
   ###### Reserved IP addresses ######
   ###### OnPremisesPrefixList is used to define which on-premises CIDR range can access managed cloud instances ######
   ###### If you wish to add multiple on-premise ranges, you can add them to the network-config.yaml under prefixLists/onpremises-prefix-list/entries ######
   - key: OnPremisesPrefixList
     type: String
-    value: 10.1.0.1/32
+    value: 10.1.0.1/32  # <----- UPDATE
   ###### Static Endpoint VPC allocations ######
   - key: VpcEndpointCidr
     type: String
